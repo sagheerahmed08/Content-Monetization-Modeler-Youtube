@@ -100,13 +100,13 @@ with tab1:
                     'Ridge': Ridge(random_state=42),
                     'Lasso': Lasso(random_state=42),
                     'RandomForest': RandomForestRegressor(
-                        n_estimators=200, random_state=42, n_jobs=-1
+                        n_estimators=100, random_state=42, n_jobs=-1
                     )
                 }
 
                 if has_xgb:
                     models['XGBoost'] = XGBRegressor(
-                        n_estimators=200, random_state=42, n_jobs=1, objective='reg:squarederror'
+                        n_estimators=100, random_state=42, n_jobs=1, objective='reg:squarederror'
                     )
 
                 # Train, cross-validate, save models
